@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            background-color: aqua;
+        }
+
+        .left-tab{
+            flex: 1;
+            display: flex;
+            margin-top: 100px;
+            padding: 25px;
+            width: 150px;
+            height: 600px;
+        }
+
+        ul{
+            display: flex;
+            flex-direction:column;
+            list-style-type: none;
+        }
+
+        li{
+            flex: 1;
+        }
+
+        .main{
+            flex: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .head{
+            color: brown;
+            font-size: 40px;
+        }
+
+        img {
+            position: absolute;
+            height: 41px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-tab">
+        <ul>
+            <li>lzl</li>
+            <li>hct</li>
+            <li>yh</li>
+        </ul>
+    </div>
+    <div class="main">
+        <h3 class="head">大傻逼</h3>
+    </div>
+    <img src="../duckl.gif" alt="">
+    <script>
+        let img = document.querySelector('img');
+        document.addEventListener('mousemove',function(e){
+            // console.log(1);
+            let x = e.pageX;
+            let y = e.pageY;
+            img.style.left=x - 25+ 'px';
+            img.style.top=y - 20 +'px';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .in{
+            margin: 0 auto;
+            width: 500px;
+            height: 300px;
+            background-color: skyblue;
+            /* 超出父级范围隐藏 */
+            overflow: hidden;
+        }
+        .out1{
+            float: left;
+            width: 250px;
+            height: 300px;
+            background-color: orange;
+            transition: all 1s;
+        }
+        .out2{
+            float: left;
+            width: 250px;
+            height: 300px;
+            background-color: blue;
+            transition: all 1s;
+        }
+        .in:hover .out1{
+            transform: translateX(-100%);
+        }
+        .in:hover .out2{
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="in">
+        <div class="out1"></div>
+        <div class="out2"></div>
+    </div>
+    
+</body>
+</html>

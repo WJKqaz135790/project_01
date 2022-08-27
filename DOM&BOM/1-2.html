@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            width: 200px;
+            border-bottom: 1px solid black;
+            margin: 100px auto;
+        }
+        .box input{
+            width: 180px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+        .box img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="tu">
+            <img src="../111.jpg" alt="">
+        </label>
+        <input type="password" name="" id="">
+    </div>
+    <script>
+        let img = document.querySelector("img");
+        let imput = document.querySelector("input");
+        img.onclick = function(){
+            imput.type = "text";
+        }
+        document.addEventListener('contextmenu',function(e){
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>
